@@ -2,8 +2,8 @@
 import './User.css'
 
 const User = (props) => {
-    render (
-        <li>{`${props.name} (${props.age} years old)`}</li>
+    return (
+        <li className='user'>{`${props.name} (${props.age} years old)`}</li>
     )
 }
 

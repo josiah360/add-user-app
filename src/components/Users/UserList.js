@@ -1,13 +1,18 @@
 import User from './User'
 import './UserList.css'
 
-const UserList = () => {
+const UserList = (props) => {
     return (
         <ul className='user-list'>
-            <User name='Josiah' age={35} />
-            <User name='Mariam' age={32} />
-            <User name='Inioluwa' age={4} />
-            <User name='Fikayo' age={1} />
+            {props.users.map(user => 
+                <User 
+                    key={user.id}
+                    name={user.name}
+                    age={user.age}
+                    id={user.id}
+                    removePlayer={props.removePlayer}
+                />
+            )}
         </ul>
     )
 }
