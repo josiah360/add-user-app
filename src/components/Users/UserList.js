@@ -10,7 +10,7 @@ const UserList = (props) => {
                     name={user.name}
                     age={user.age}
                     id={user.id}
-                    removePlayer={props.removePlayer}
+                    removeUser={props.removeUser}
                 />
             )}
         </ul>

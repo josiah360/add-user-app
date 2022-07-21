@@ -4,7 +4,7 @@ import './UsersContainer.css'
 const UsersContainer = (props) => {
     return (
         <div className="users-container">
-            <UserList users={props.users} removePlayer={props.removePlayer} />
+            <UserList users={props.users} removeUser={props.removeUser} />
         </div>
     )
 }

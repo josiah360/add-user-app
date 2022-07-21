@@ -17,6 +17,16 @@ const AddUserForm = (props) => {
     const userSubmitHandler = (e) => {
         e.preventDefault()
 
+        if(username.trim() === '' || age === '') {
+            props.validateForm(false)
+            return
+        }
+
+        if(+age < 18 || +age > 35) {
+            props.validateAge(false)
+            return
+        }
+
         const newUser = {
             name: username,
             age: +age,
@@ -36,7 +46,7 @@ const AddUserForm = (props) => {
             </div>
             <div className="user-form__age">
                 <label htmlFor="age" >Age</label>
-                <input value={age} type="number" id="age" min="18" max="35" onChange={ageHandler}/>
+                <input value={age} type="number" id="age" onChange={ageHandler}/>
             </div>
             <div className="user-form__button">
                 <button type="submit">Add User</button>
