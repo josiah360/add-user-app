@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.user-form {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.user-form__username,
+.user-form__age {
+    margin-bottom: .7em;
+}
+
+.user-form__username label,
+.user-form__age label {
+    font-size: .9em;
+}
+
+.user-form__username input,
+.user-form__age input {
+    width: 100%;
+    padding: 10px 7px;
+    margin-top: 8px;
+    border-radius: 3px;
+    border: 1px solid #999;
+}
+
+.user-form__button button {
+    width: 100%;
+    padding: 10px;
+    margin-top: .7em;
+    background-color: rgb(70, 26, 70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input:focus,
+.user-form__button button:focus {
+    outline: none;
+}
+
+.user-form__button button:active {
+    transform: scale(0.98);
+}
+
